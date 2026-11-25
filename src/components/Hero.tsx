@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
 
       <div className="container-custom relative z-10 py-12 lg:py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl w-full">
           <motion.span
             className="inline-block px-4 py-1.5 text-xs font-semibold text-brand-red uppercase tracking-wider bg-white/10 backdrop-blur-sm rounded-full mb-6"
             initial={{ opacity: 0, y: 20 }}
