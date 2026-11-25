@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200 h-14 lg:h-16">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200 h-16 lg:h-20 pt-2 lg:pt-0">
       <nav className="container-custom" aria-label="Main navigation">
         <div className="flex items-center justify-between h-full">
           <a
@@ -19,7 +19,7 @@ export default function Navbar() {
             className="flex items-center gap-3 text-brand-charcoal hover:opacity-80 transition-opacity"
             aria-label="TORQ Home"
           >
-            <img src="/logo.png" alt="TORQ Logo" className="h-8 lg:h-10 object-contain" />
+            <img src="/logo.png" alt="TORQ Logo" className="h-10 lg:h-12 object-contain" />
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
