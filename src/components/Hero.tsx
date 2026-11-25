@@ -1,130 +1,98 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin, Shield, Clock, Star, Users, Wrench } from 'lucide-react';
+import { ArrowRight, Shield, Clock, MapPin } from 'lucide-react';
 
-const trustItems = [
-  { icon: Shield, label: 'Verified Mechanics', desc: 'Background checked' },
-  { icon: Clock, label: 'Fast Response', desc: 'Nearby help' },
-  { icon: Star, label: 'Transparent Pricing', desc: 'No hidden fees' },
+const trustIndicators = [
+  { icon: Shield, label: 'Verified Mechanics', desc: 'Background checked & skilled' },
+  { icon: Clock, label: 'Fast Response', desc: 'Average 30 min ETA' },
+  { icon: MapPin, label: 'Local Network', desc: 'Mechanics near you' },
 ];
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[580px] lg:min-h-[650px] flex items-end hero-gradient overflow-hidden pt-16 lg:pt-20">
-      <div className="absolute inset-0 right-0 w-full lg:w-[55%] h-full" aria-hidden="true">
+    <section id="home" className="relative min-h-screen flex items-center pt-16 lg:pt-20 overflow-hidden">
+      <div className="absolute inset-0 z-0">
         <img
           src="/hero-image.png"
-          alt="Stranded vehicle on Indian highway with mechanic arriving to help"
-          className="absolute inset-0 w-full h-full object-cover"
+          alt=""
+          className="w-full h-full object-cover"
+          aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-white via-white/80 to-transparent lg:from-white/90 lg:via-white/50 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal/90 via-brand-charcoal/70 to-brand-charcoal/40" aria-hidden="true" />
       </div>
 
-      <div className="container-custom relative z-10 pb-12 lg:pb-20">
-        <div className="max-w-2xl lg:max-w-3xl">
+      <div className="container-custom relative z-10 py-12 lg:py-20">
+        <div className="max-w-3xl">
           <motion.span
-            className="inline-block px-3 py-1 text-xs font-semibold text-brand-red uppercase tracking-wider bg-brand-red/10 rounded-full"
+            className="inline-block px-4 py-1.5 text-xs font-semibold text-brand-red uppercase tracking-wider bg-white/10 backdrop-blur-sm rounded-full mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.6 }}
           >
-            ROADSIDE ASSISTANCE, REIMAGINED
+            INDIA'S TRUSTED ROADSIDE ASSISTANCE
           </motion.span>
 
           <motion.h1
-            className="mt-4 text-[48px] sm:text-[56px] lg:text-[68px] xl:text-[76px] font-bold leading-[1.02] text-brand-charcoal text-balance"
+            className="text-[44px] sm:text-[56px] lg:text-[72px] xl:text-[84px] font-bold text-white text-balance leading-[1.05] mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
-            BREAKDOWNS HAPPEN.<br />
-            <span className="text-brand-red">WE'VE GOT YOUR BACK.</span>
+            YOUR JOURNEY SHOULDN'T END<br />
+            <span className="text-brand-red">WITH A BREAKDOWN.</span>
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-lg sm:text-xl text-brand-charcoal/70 max-w-xl leading-relaxed"
+            className="text-lg sm:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            From unexpected breakdowns to roadside emergencies, TORQ connects you with verified nearby mechanics so you can get back on the road with confidence.
+            Flat tyre? Dead battery? Engine trouble? Get verified mechanics dispatched to your location in minutes. Transparent pricing. No hidden fees.
           </motion.p>
 
           <motion.div
-            className="mt-8 flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <a
-              href="#assistance"
-              className="group flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-brand-red hover:bg-brand-red/90 transition-colors rounded-md"
+              href="#cta"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-brand-charcoal bg-white hover:bg-white/90 transition-colors rounded-md"
             >
-              GET ROADSIDE ASSISTANCE
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              Request Assistance Now
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </a>
             <a
-              href="#how-it-works"
-              className="group flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-brand-charcoal border-2 border-neutral-300 hover:border-brand-red hover:text-brand-red transition-colors rounded-md"
+              href="#features"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white/90 border border-white/30 hover:border-white/50 hover:bg-white/5 transition-colors rounded-md"
             >
-              EXPLORE HOW IT WORKS
+              How It Works
             </a>
           </motion.div>
 
           <motion.div
-            className="mt-10 flex flex-wrap items-center gap-6 lg:gap-10 text-sm text-brand-muted"
-            initial={{ opacity: 0, y: 20 }}
+            className="grid grid-cols-3 gap-6 sm:gap-8"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {trustItems.map((item, index) => (
-              <div
-                key={item.label}
-                className="flex items-center gap-2"
-                style={{ transitionDelay: `${0.5 + index * 0.1}s` }}
-              >
-                <div className="w-8 h-8 rounded-lg border border-brand-red/30 flex items-center justify-center">
-                  <item.icon className="w-4 h-4 text-brand-red" aria-hidden="true" />
+            {trustIndicators.map((item) => (
+              <div key={item.label} className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-5 h-5 text-white" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="font-medium text-brand-charcoal">{item.label}</p>
-                  <p className="text-xs">{item.desc}</p>
+                  <p className="font-semibold text-white text-sm">{item.label}</p>
+                  <p className="text-white/60 text-xs mt-0.5">{item.desc}</p>
                 </div>
               </div>
             ))}
           </motion.div>
         </div>
-
-        <motion.div
-          className="absolute bottom-0 left-0 right-0 lg:left-auto lg:right-0 lg:bottom-8 w-full lg:w-[380px] max-w-[380px] bg-white rounded-xl shadow-xl p-5 border border-neutral-200"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center">
-              <MapPin className="w-5 h-5 text-brand-red" aria-hidden="true" />
-            </div>
-            <div>
-              <p className="font-semibold text-brand-charcoal text-sm">Service Area</p>
-              <p className="text-xs text-brand-muted">Azamgarh, Uttar Pradesh</p>
-            </div>
-          </div>
-          <div className="border-t border-neutral-200 pt-4">
-            <div className="flex items-center gap-2 text-xs text-brand-muted mb-2">
-              <Users className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>Mechanic network</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-brand-muted mb-2">
-              <Wrench className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>Assistance</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-brand-muted">
-              <Shield className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>Service transparency</span>
-            </div>
-          </div>
-        </motion.div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-charcoal to-transparent pointer-events-none" aria-hidden="true" />
     </section>
   );
 }

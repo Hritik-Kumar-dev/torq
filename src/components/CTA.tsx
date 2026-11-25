@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
 
-export default function FinalCTA() {
+export default function CTA() {
   return (
     <section id="cta" className="section-padding bg-brand-charcoal relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-brand-red/10 via-transparent to-brand-orange/5" aria-hidden="true" />
@@ -21,48 +21,48 @@ export default function FinalCTA() {
           </div>
 
           <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] xl:text-[64px] font-bold text-white text-balance leading-tight mb-6">
-            YOUR JOURNEY SHOULDN'T END<br />
-            <span className="text-brand-red">WITH A BREAKDOWN.</span>
+            READY WHEN<br />
+            <span className="text-brand-red">YOU NEED US MOST.</span>
           </h2>
 
           <p className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Whenever the unexpected happens, TORQ is working to make getting help simpler.
-            Join us in building reliable roadside assistance for Indian roads.
+            Join thousands of drivers who trust TORQ for reliable roadside assistance.
+            Starting in Azamgarh, expanding across UP.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
             <a
-              href="#assistance"
+              href="#"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-brand-charcoal bg-white hover:bg-white/90 transition-colors rounded-md"
             >
-              Get Started with TORQ
+              Get Started Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </a>
             <a
-              href="#about"
+              href="#features"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white/80 border border-white/20 hover:border-white/40 hover:text-white transition-colors rounded-md"
             >
-              Learn More
+              See All Features
             </a>
           </div>
 
           <motion.div
-            className="mt-14 flex flex-wrap items-center justify-center gap-6 lg:gap-10 text-sm text-white/40"
+            className="flex flex-wrap items-center justify-center gap-6 lg:gap-10 text-sm text-white/40"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-brand-red" aria-hidden="true" />
-              <span>No fake guarantees</span>
+              <CheckCircle className="w-4 h-4 text-brand-red" aria-hidden="true" />
+              <span>No credit card required</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-brand-orange" aria-hidden="true" />
-              <span>Real mechanics, real help</span>
+              <CheckCircle className="w-4 h-4 text-brand-orange" aria-hidden="true" />
+              <span>Cancel anytime</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-white/30" aria-hidden="true" />
-              <span>Built in public</span>
+              <CheckCircle className="w-4 h-4 text-white/30" aria-hidden="true" />
+              <span>24/7 support</span>
             </div>
           </motion.div>
         </motion.div>
