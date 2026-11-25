@@ -19,7 +19,7 @@ export default function Navbar() {
             className="flex items-center gap-3 text-brand-charcoal hover:opacity-80 transition-opacity"
             aria-label="TORQ Home"
           >
-            <img src="/logo.png" alt="TORQ Logo" className="h-10 lg:h-12 object-contain" />
+            <span className="font-heading text-xl lg:text-2xl font-bold tracking-tight text-brand-charcoal">TORQ</span>
           </a>
 
           <div className="hidden lg:flex items-center gap-8">

@@ -20,8 +20,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal/90 via-brand-charcoal/70 to-brand-charcoal/40" aria-hidden="true" />
       </div>
 
-      <div className="container-custom relative z-10 py-12 lg:py-20">
-        <div className="w-full max-w-[800px]">
+      <div className="relative z-10 py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[700px]">
           <motion.span
             className="inline-block px-4 py-1.5 text-xs font-semibold text-brand-red uppercase tracking-wider bg-white/10 backdrop-blur-sm rounded-full mb-6"
             initial={{ opacity: 0, y: 20 }}
