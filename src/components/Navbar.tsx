@@ -37,20 +37,11 @@ export default function Navbar() {
             className="flex items-center gap-2 text-brand-charcoal hover:opacity-80 transition-opacity"
             aria-label="TORQ Home"
           >
-            <svg
-              className="w-8 h-8 text-brand-red"
-              viewBox="0 0 48 48"
-              fill="none"
-              aria-hidden="true"
-            >
-              <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="3" />
-              <path
-                d="M24 12v24M12 24h24"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-            </svg>
+            <img
+              src="/logo.png"
+              alt="TORQ Logo"
+              className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
+            />
             <span className="font-display text-xl lg:text-2xl font-bold tracking-tight">
               TORQ
             </span>
