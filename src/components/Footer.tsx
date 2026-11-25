@@ -70,8 +70,8 @@ export default function Footer() {
     <footer id="about" className="bg-brand-charcoal text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-red/5 via-transparent to-transparent" aria-hidden="true" />
 
-      <div className="container-custom relative py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-12 mb-16">
+      <div className="container-custom relative py-12 lg:py-20">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-12 mb-12">
           <motion.div
             className="xl:col-span-2"
             initial={{ opacity: 0, y: 20 }}
@@ -79,12 +79,9 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <a href="#home" className="flex items-center gap-2 mb-6" aria-label="TORQ Home">
-              <svg className="w-10 h-10 text-brand-red" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="3" />
-                <path d="M24 12v24M12 24h24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-              </svg>
-              <span className="font-display text-2xl font-bold tracking-tight">TORQ</span>
+            <a href="#home" className="flex items-center gap-3 mb-6" aria-label="TORQ Home">
+              <img src="/logo.png" alt="" className="h-8 lg:h-10 object-contain" />
+              <span className="font-heading text-xl lg:text-2xl font-bold tracking-tight">TORQ</span>
             </a>
             <p className="text-white/60 max-w-sm mb-8 leading-relaxed">
               Technology-enabled roadside assistance connecting vehicle owners with verified nearby mechanics. Starting in Azamgarh, Uttar Pradesh.
@@ -110,7 +107,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             aria-label="Platform links"
           >
-            <h3 className="font-semibold text-white mb-4">Platform</h3>
+            <h3 className="font-heading text-sm font-semibold text-white uppercase tracking-wider mb-4">Platform</h3>
             <ul className="space-y-3" role="list">
               {footerLinks.platform.map((link) => (
                 <li key={link.label}>
@@ -132,7 +129,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.15 }}
             aria-label="Services links"
           >
-            <h3 className="font-semibold text-white mb-4">Services</h3>
+            <h3 className="font-heading text-sm font-semibold text-white uppercase tracking-wider mb-4">Services</h3>
             <ul className="space-y-3" role="list">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
@@ -154,7 +151,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             aria-label="Support links"
           >
-            <h3 className="font-semibold text-white mb-4">Support</h3>
+            <h3 className="font-heading text-sm font-semibold text-white uppercase tracking-wider mb-4">Support</h3>
             <ul className="space-y-3" role="list">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
@@ -171,7 +168,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10">
-          <div className="grid lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid lg:grid-cols-4 gap-8 mb-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -179,7 +176,7 @@ export default function Footer() {
               transition={{ duration: 0.5 }}
               className="lg:col-span-2"
             >
-              <h3 className="font-semibold text-white mb-4">Contact Information</h3>
+              <h3 className="font-heading text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact Information</h3>
               <p className="text-white/40 text-sm mb-6">
                 <em>Note: Contact details are placeholders and need to be updated with real business information.</em>
               </p>
@@ -205,7 +202,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h3 className="font-semibold text-white mb-4">Legal</h3>
+              <h3 className="font-heading text-sm font-semibold text-white uppercase tracking-wider mb-4">Legal</h3>
               <ul className="space-y-2" role="list">
                 {footerLinks.legal.map((link) => (
                   <li key={link.label}>
@@ -226,7 +223,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
             >
-              <h3 className="font-semibold text-white mb-4">Status</h3>
+              <h3 className="font-heading text-sm font-semibold text-white uppercase tracking-wider mb-4">Status</h3>
               <ul className="space-y-2 text-sm text-white/60" role="list">
                 <li>Active in Azamgarh</li>
                 <li>Expanding to Varanasi (Phase 2)</li>

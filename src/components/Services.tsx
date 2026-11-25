@@ -50,10 +50,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="section-padding bg-white">
+    <section id="services" className="section-padding bg-brand-offwhite">
       <div className="container-custom">
         <motion.div
-          className="max-w-3xl mx-auto text-center mb-16 lg:mb-20"
+          className="max-w-3xl mx-auto text-center mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -62,11 +62,11 @@ export default function Services() {
           <span className="inline-block px-3 py-1 text-xs font-semibold text-brand-red uppercase tracking-wider bg-brand-red/10 rounded-full mb-4">
             SERVICES
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-charcoal text-balance leading-tight">
+          <h2 className="text-[36px] sm:text-[44px] lg:text-[52px] font-bold text-brand-charcoal text-balance leading-tight">
             ONE PLATFORM. HELP FOR THE<br />
             <span className="text-brand-red">UNEXPECTED.</span>
           </h2>
-          <p className="mt-6 text-lg text-brand-muted max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-brand-muted max-w-2xl mx-auto">
             Comprehensive roadside coverage for the most common vehicle emergencies on Indian roads.
           </p>
         </motion.div>
@@ -79,19 +79,19 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative bg-white rounded-2xl border border-neutral-200 p-6 lg:p-8 hover:border-brand-red/30 hover:shadow-xl transition-all duration-300"
+              className="group relative bg-white rounded-xl border border-neutral-200 p-6 lg:p-8 hover:border-brand-red/30 hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-brand-red/10 flex items-center justify-center mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
-                <service.icon className="w-7 h-7 text-brand-red group-hover:text-white transition-colors duration-300" aria-hidden="true" />
+              <div className="w-12 h-12 rounded-xl bg-brand-red/10 flex items-center justify-center mb-5 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                <service.icon className="w-6 h-6 text-brand-red group-hover:text-white transition-colors duration-300" aria-hidden="true" />
               </div>
 
-              <h3 className="text-xl font-bold text-brand-charcoal mb-3 group-hover:text-brand-red transition-colors duration-300">
+              <h3 className="font-heading text-lg lg:text-xl font-bold text-brand-charcoal mb-2 group-hover:text-brand-red transition-colors duration-300">
                 {service.title}
               </h3>
 
-              <p className="text-brand-muted leading-relaxed mb-6">{service.description}</p>
+              <p className="text-brand-muted leading-relaxed mb-5">{service.description}</p>
 
-              <ul className="space-y-2 mb-6" role="list">
+              <ul className="space-y-2 mb-5" role="list">
                 {service.features.map((feature, featureIndex) => (
                   <motion.li
                     key={feature}
@@ -118,7 +118,7 @@ export default function Services() {
         </div>
 
         <motion.div
-          className="mt-16 text-center"
+          className="mt-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

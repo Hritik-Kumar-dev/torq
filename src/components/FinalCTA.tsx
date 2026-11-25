@@ -20,7 +20,7 @@ export default function FinalCTA() {
             <span className="text-xs font-semibold text-white/70 uppercase tracking-wider">EARLY ACCESS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl lg:text-6xl font-bold text-white text-balance leading-tight mb-6">
+          <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] xl:text-[64px] font-bold text-white text-balance leading-tight mb-6">
             YOUR JOURNEY SHOULDN'T END<br />
             <span className="text-brand-red">WITH A BREAKDOWN.</span>
           </h2>
@@ -47,7 +47,7 @@ export default function FinalCTA() {
           </div>
 
           <motion.div
-            className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-white/40"
+            className="mt-14 flex flex-wrap items-center justify-center gap-6 lg:gap-10 text-sm text-white/40"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}

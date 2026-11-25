@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
@@ -11,43 +11,28 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm'
-          : 'bg-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-neutral-200 transition-all duration-300 h-[72px] lg:h-[80px]">
       <nav className="container-custom" aria-label="Main navigation">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-full">
           <a
             href="#home"
-            className="flex items-center gap-2 text-brand-charcoal hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 text-brand-charcoal hover:opacity-80 transition-opacity"
             aria-label="TORQ Home"
           >
             <img
               src="/logo.png"
               alt="TORQ Logo"
-              className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
+              className="h-[36px] lg:h-[40px] object-contain"
             />
-            <span className="font-display text-xl lg:text-2xl font-bold tracking-tight">
+            <span className="font-heading text-xl lg:text-2xl font-bold tracking-tight">
               TORQ
             </span>
           </a>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -59,7 +44,7 @@ export default function Navbar() {
             ))}
             <a
               href="#assistance"
-              className="px-5 py-2.5 text-sm font-semibold text-white bg-brand-red hover:bg-brand-red/90 transition-colors rounded-md"
+              className="px-6 py-2.5 text-sm font-semibold text-white bg-brand-red hover:bg-brand-red/90 transition-colors rounded-md"
             >
               Get Assistance
             </a>

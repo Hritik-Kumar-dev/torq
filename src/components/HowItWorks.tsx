@@ -34,10 +34,10 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding bg-brand-offwhite">
+    <section id="how-it-works" className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
-          className="max-w-3xl mx-auto text-center mb-16 lg:mb-20"
+          className="max-w-3xl mx-auto text-center mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -46,19 +46,19 @@ export default function HowItWorks() {
           <span className="inline-block px-3 py-1 text-xs font-semibold text-brand-red uppercase tracking-wider bg-brand-red/10 rounded-full mb-4">
             HOW IT WORKS
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-charcoal text-balance leading-tight">
+          <h2 className="text-[36px] sm:text-[44px] lg:text-[52px] font-bold text-brand-charcoal text-balance leading-tight">
             HELP IS JUST A<br />
             <span className="text-brand-red">FEW STEPS AWAY.</span>
           </h2>
-          <p className="mt-6 text-lg text-brand-muted max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-brand-muted max-w-2xl mx-auto">
             From breakdown to back on the road — a streamlined process designed for stressful moments.
           </p>
         </motion.div>
 
         <div className="relative">
-          <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 w-[80%] h-0.5 bg-gradient-to-r from-brand-red/20 via-brand-red/40 to-brand-orange/20" aria-hidden="true" />
+          <div className="hidden lg:block absolute top-[60px] left-1/2 -translate-x-1/2 w-[80%] h-0.5 bg-gradient-to-r from-brand-red/20 via-brand-red/40 to-brand-orange/20" aria-hidden="true" />
 
-          <div className="grid lg:grid-cols-4 gap-8 lg:gap-4 relative z-10">
+          <div className="grid lg:grid-cols-4 gap-6 lg:gap-4 relative z-10">
             {steps.map((step, index) => (
               <motion.article
                 key={step.number}
@@ -70,16 +70,16 @@ export default function HowItWorks() {
               >
                 <div className="text-center lg:text-left">
                   <div className="relative mb-6">
-                    <div className={`w-16 h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center mx-auto lg:mx-0 ${index % 2 === 0 ? 'bg-brand-red/10' : 'bg-brand-orange/10'} border border-neutral-200`}>
-                      <step.icon className="w-8 h-8 lg:w-10 lg:h-10" style={{ color: index % 2 === 0 ? '#D92727' : '#F28C28' }} aria-hidden="true" />
+                    <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center mx-auto lg:mx-0 ${index % 2 === 0 ? 'bg-brand-red/10' : 'bg-brand-orange/10'} border border-neutral-200`}>
+                      <step.icon className="w-7 h-7 lg:w-8 lg:h-8" style={{ color: index % 2 === 0 ? '#D92727' : '#F28C28' }} aria-hidden="true" />
                     </div>
-                    <span className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-brand-charcoal text-white font-display font-bold text-xl lg:text-2xl flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-brand-charcoal text-white font-heading font-bold text-lg lg:text-xl flex items-center justify-center">
                       {step.number}
                     </span>
                   </div>
 
-                  <h3 className="text-xl lg:text-2xl font-bold text-brand-charcoal mb-3">{step.title}</h3>
-                  <p className="text-brand-muted leading-relaxed mb-6">{step.description}</p>
+                  <h3 className="font-heading text-lg lg:text-xl font-bold text-brand-charcoal mb-3">{step.title}</h3>
+                  <p className="text-brand-muted leading-relaxed mb-5">{step.description}</p>
 
                   <ul className="space-y-2" role="list">
                     {step.details.map((detail, detailIndex) => (
@@ -98,7 +98,7 @@ export default function HowItWorks() {
                 </div>
 
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 right-[-50%] w-full h-0.5 bg-gradient-to-r from-brand-red/20 via-brand-red/40 to-brand-orange/20" aria-hidden="true" />
+                  <div className="hidden lg:block absolute top-[50px] right-[-50%] w-full h-0.5 bg-gradient-to-r from-brand-red/20 via-brand-red/40 to-brand-orange/20" aria-hidden="true" />
                 )}
               </motion.article>
             ))}
@@ -106,28 +106,28 @@ export default function HowItWorks() {
         </div>
 
         <motion.div
-          className="lg:hidden mt-16"
+          className="lg:hidden mt-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="space-y-6">
+          <div className="space-y-4">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex gap-4 p-6 bg-white rounded-2xl border border-neutral-200"
+                className="flex gap-4 p-5 bg-brand-offwhite rounded-xl border border-neutral-200"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center bg-brand-red/10">
-                  <step.icon className="w-6 h-6 text-brand-red" aria-hidden="true" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center bg-brand-red/10">
+                  <step.icon className="w-5 h-5 text-brand-red" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl font-bold text-brand-charcoal font-display">{step.number}</span>
-                    <h3 className="text-lg font-bold text-brand-charcoal">{step.title}</h3>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="font-heading text-xl font-bold text-brand-charcoal">{step.number}</span>
+                    <h3 className="font-semibold text-brand-charcoal">{step.title}</h3>
                   </div>
                   <p className="text-sm text-brand-muted">{step.description}</p>
                 </div>

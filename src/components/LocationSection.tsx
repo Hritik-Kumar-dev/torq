@@ -15,7 +15,7 @@ export default function LocationSection() {
     <section id="location" className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
-          className="max-w-3xl mx-auto text-center mb-16 lg:mb-20"
+          className="max-w-3xl mx-auto text-center mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -24,17 +24,17 @@ export default function LocationSection() {
           <span className="inline-block px-3 py-1 text-xs font-semibold text-brand-red uppercase tracking-wider bg-brand-red/10 rounded-full mb-4">
             LOCATION
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-charcoal text-balance leading-tight">
+          <h2 className="text-[36px] sm:text-[44px] lg:text-[52px] font-bold text-brand-charcoal text-balance leading-tight">
             STARTING LOCAL.<br />
             BUILT TO GO<br />
             <span className="text-brand-red">FURTHER.</span>
           </h2>
-          <p className="mt-6 text-lg text-brand-muted max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-brand-muted max-w-2xl mx-auto">
             TORQ launches in Azamgarh, Uttar Pradesh — our home base. We're building a dense, reliable network block by block before expanding.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,7 +42,7 @@ export default function LocationSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl bg-brand-offwhite border border-neutral-200 relative overflow-hidden">
+            <div className="aspect-square rounded-xl bg-brand-offwhite border border-neutral-200 relative overflow-hidden">
               <svg
                 className="absolute inset-0 w-full h-full"
                 viewBox="0 0 400 400"
@@ -116,7 +116,7 @@ export default function LocationSection() {
                 <text x="160" y="335" textAnchor="middle" fontFamily="system-ui" fontSize="8" fill="#9CA3AF">Mau</text>
               </svg>
 
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 border border-neutral-200 shadow-lg">
+              <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-neutral-200 shadow-lg">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 rounded-lg bg-brand-red/10 flex items-center justify-center">
                     <MapPin className="w-4 h-4 text-brand-red" aria-hidden="true" />
@@ -150,17 +150,17 @@ export default function LocationSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="space-y-6 mb-10">
+            <div className="space-y-4 mb-8">
               {cities.map((city, index) => (
                 <motion.div
                   key={city.name}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className="flex items-center justify-between p-4 bg-brand-offwhite rounded-xl hover:bg-brand-offwhite/80 transition-colors group"
+                  className="flex items-center justify-between p-4 bg-brand-offwhite rounded-lg hover:bg-brand-offwhite/80 transition-colors group"
                 >
                   <div className="flex items-center gap-4">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${city.status === 'Active' ? 'bg-brand-red/10' : city.status === 'Coming Soon' ? 'bg-brand-orange/10' : 'bg-neutral-100'}`}>
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${city.status === 'Active' ? 'bg-brand-red/10' : city.status === 'Coming Soon' ? 'bg-brand-orange/10' : 'bg-neutral-100'}`}>
                       {city.status === 'Active' && <MapPin className="w-5 h-5 text-brand-red" aria-hidden="true" />}
                       {city.status === 'Coming Soon' && <Navigation className="w-5 h-5 text-brand-orange" aria-hidden="true" />}
                       {city.status === 'Planned' && <Building2 className="w-5 h-5 text-brand-muted" aria-hidden="true" />}
@@ -177,11 +177,11 @@ export default function LocationSection() {
               ))}
             </div>
 
-            <div className="bg-brand-charcoal rounded-2xl p-6 lg:p-8 text-white">
-              <h3 className="text-xl lg:text-2xl font-bold mb-4">
+            <div className="bg-brand-charcoal rounded-xl p-6 lg:p-8 text-white">
+              <h3 className="font-heading text-xl lg:text-2xl font-bold mb-4">
                 Want TORQ in your city?
               </h3>
-              <p className="text-white/70 mb-6 max-w-md">
+              <p className="text-white/70 mb-5 max-w-md">
                 We prioritize expansion based on demand. Tell us where you need roadside assistance most.
               </p>
               <a
