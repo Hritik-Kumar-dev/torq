@@ -41,13 +41,13 @@ export default function Footer() {
         <div className="grid lg:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-12 mb-12">
           <div className="xl:col-span-2">
             <a href="#" className="flex items-center gap-3 mb-6" aria-label="TORQ Home">
-              <img src="/logo.png" alt="" className="h-8 lg:h-10 object-contain" />
-              <span className="font-heading text-xl lg:text-2xl font-bold tracking-tight">TORQ</span>
+              <img src="/logo.png" alt="" className="h-7 lg:h-9 object-contain" />
+              <span className="font-heading text-lg lg:text-xl font-bold tracking-tight">TORQ</span>
             </a>
-            <p className="text-white/60 max-w-sm mb-8 leading-relaxed">
+            <p className="text-white/60 max-w-sm mb-6 leading-relaxed text-sm">
               Technology-enabled roadside assistance connecting vehicle owners with verified nearby mechanics. Starting in Azamgarh, Uttar Pradesh.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}

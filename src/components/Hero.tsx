@@ -32,7 +32,7 @@ export default function Hero() {
           </motion.span>
 
           <motion.h1
-            className="text-[44px] sm:text-[56px] lg:text-[72px] xl:text-[84px] font-bold text-white text-balance leading-[1.05] mb-6"
+            className="text-[32px] sm:text-[44px] lg:text-[56px] xl:text-[72px] font-bold text-white text-balance leading-[1.1] mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -42,7 +42,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-lg sm:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
+            className="text-base sm:text-lg text-white/80 max-w-2xl mb-10 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -51,28 +51,28 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-3 mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <a
               href="#cta"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-brand-charcoal bg-white hover:bg-white/90 transition-colors rounded-md"
+              className="group inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-brand-charcoal bg-white hover:bg-white/90 transition-colors rounded-md"
             >
               Request Assistance Now
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </a>
             <a
               href="#features"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white/90 border border-white/30 hover:border-white/50 hover:bg-white/5 transition-colors rounded-md"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white/90 border border-white/30 hover:border-white/50 hover:bg-white/5 transition-colors rounded-md"
             >
               How It Works
             </a>
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-3 gap-6 sm:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}

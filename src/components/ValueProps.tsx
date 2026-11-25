@@ -76,7 +76,7 @@ export default function ValueProps() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 lg:p-8 border border-neutral-200 hover:border-brand-red/30 hover:shadow-xl transition-all duration-300 group"
+              className="bg-white rounded-2xl p-5 lg:p-7 border border-neutral-200 hover:border-brand-red/30 hover:shadow-xl transition-all duration-300 group"
             >
               <div className="w-12 h-12 rounded-xl bg-brand-red/10 flex items-center justify-center mb-5 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
                 <feature.icon className="w-6 h-6 text-brand-red group-hover:text-white transition-colors duration-300" aria-hidden="true" />

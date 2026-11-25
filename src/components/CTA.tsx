@@ -20,27 +20,27 @@ export default function CTA() {
             <span className="text-xs font-semibold text-white/70 uppercase tracking-wider">EARLY ACCESS</span>
           </div>
 
-          <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] xl:text-[64px] font-bold text-white text-balance leading-tight mb-6">
+          <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[56px] font-bold text-white text-balance leading-tight mb-6">
             READY WHEN<br />
             <span className="text-brand-red">YOU NEED US MOST.</span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto mb-8 leading-relaxed">
             Join thousands of drivers who trust TORQ for reliable roadside assistance.
             Starting in Azamgarh, expanding across UP.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <a
               href="#"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-brand-charcoal bg-white hover:bg-white/90 transition-colors rounded-md"
+              className="group inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-brand-charcoal bg-white hover:bg-white/90 transition-colors rounded-md"
             >
               Get Started Free
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </a>
             <a
               href="#features"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white/80 border border-white/20 hover:border-white/40 hover:text-white transition-colors rounded-md"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white/80 border border-white/20 hover:border-white/40 hover:text-white transition-colors rounded-md"
             >
               See All Features
             </a>
